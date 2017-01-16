@@ -21,7 +21,7 @@ def encode():
     return render_template("encoded.html", key=key, text=text, output=output);
 
 @app.route("/decode", methods=['GET', 'POST'])
-def encode():
+def decode():
   if request.method == 'GET':
     return render_template("decode.html");
   elif request.method == 'POST':
