@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template;
 app = Flask(__name__)
 
-@app.route("/encode", methods=['GET', 'POST'])
+@app.route("/encode/", methods=['GET', 'POST'])
 def encode():
   if request.method == 'GET':
     return render_template("encode.html");
@@ -20,7 +20,7 @@ def encode():
         output += char
     return render_template("encoded.html", key=key, text=text, output=output);
 
-@app.route("/decode", methods=['GET', 'POST'])
+@app.route("/decode/", methods=['GET', 'POST'])
 def decode():
   if request.method == 'GET':
     return render_template("decode.html");
